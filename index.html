@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Virtual GEO - Privacy Policy">
+  <title>Virtual GEO — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.7;
+      color: #333;
+      background: #fafafa;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 { 
+      color: #2c3e50; 
+      border-bottom: 3px solid #4a90e2; 
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    h2 { 
+      color: #34495e; 
+      margin: 30px 0 15px 0;
+      font-size: 20px;
+    }
+    p, li { 
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .updated { 
+      color: #888; 
+      font-size: 14px; 
+      font-style: italic;
+      background: #f8f9fa;
+      padding: 10px 15px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    code { 
+      background: #f4f4f4; 
+      padding: 2px 6px; 
+      border-radius: 3px; 
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+      color: #e83e8c;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #4a90e2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .back-link:hover {
+      background: #357abd;
+    }
+    .highlight {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #888;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Virtual GEO Browser Extension</p>
+    <p class="updated">Last updated: June 30, 2026</p>
+
+    <h2>1. Overview</h2>
+    <p>
+      <strong>Virtual GEO</strong> is a browser extension that allows users to set custom virtual 
+      geolocation coordinates for websites. This privacy policy explains what data the extension 
+      handles and how it is processed.
+    </p>
+
+    <div class="highlight">
+      <strong>TL;DR:</strong> We don't collect, transmit, or share ANY data. Everything stays on your device.
+    </div>
+
+    <h2>2. Data Collection</h2>
+    <p>
+      <strong>Virtual GEO does NOT collect, transmit, or share any user data.</strong>
+    </p>
+    <p>The extension does not:</p>
+    <ul>
+      <li>Collect personal information (name, email, IP address, etc.)</li>
+      <li>Track browsing history or visited websites</li>
+      <li>Send any data to external servers</li>
+      <li>Use analytics or telemetry</li>
+      <li>Share data with third parties</li>
+      <li>Use cookies or similar tracking technologies</li>
+    </ul>
+
+    <h2>3. Data Storage</h2>
+    <p>
+      All user settings are stored <strong>locally</strong> in the browser using 
+      <code>chrome.storage.local</code>. This includes:
+    </p>
+    <ul>
+      <li>Custom geolocation coordinates (latitude, longitude)</li>
+      <li>Accuracy, altitude, and altitude accuracy values</li>
+      <li>Debug mode preference</li>
+    </ul>
+    <p>
+      This data never leaves the user's device and is accessible only to the extension itself.
+    </p>
+
+    <h2>4. Permissions Explained</h2>
+    <p>The extension requests the following permissions, all required for its core functionality:</p>
+    <ul>
+      <li><strong><code>storage</code></strong> — to save user settings locally.</li>
+      <li><strong><code>tabs</code></strong> — to apply geolocation overrides to open tabs.</li>
+      <li><strong><code>scripting</code></strong> — to inject the geolocation override script into web pages.</li>
+      <li><strong><code>debugger</code></strong> — optional "Debug mode" that uses Chrome DevTools Protocol 
+          for reliable geolocation override on complex websites.</li>
+      <li><strong><code>&lt;all_urls&gt;</code></strong> — to override geolocation on any website the user visits.</li>
+    </ul>
+
+    <h2>5. How It Works</h2>
+    <p>
+      When a website requests the user's geolocation via the browser's Geolocation API, 
+      Virtual GEO intercepts this request and returns the coordinates configured by the user. 
+      No data is sent to any server — the override happens entirely within the user's browser.
+    </p>
+    <p>
+      In "Debug mode", the extension uses Chrome DevTools Protocol (CDP) to override geolocation 
+      at the browser level, providing maximum compatibility with complex websites.
+    </p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>
+      The extension does not integrate with any third-party services, analytics platforms, 
+      advertising networks, or external APIs.
+    </p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+      The extension does not knowingly collect any data from anyone, including children 
+      under the age of 13. Our service is designed to respect user privacy regardless of age.
+    </p>
+
+    <h2>8. Security</h2>
+    <p>
+      Since we don't collect or transmit any data, there's no risk of data breaches or 
+      unauthorized access to user information. All data remains securely stored in the 
+      user's browser.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted 
+      on this page with an updated revision date. We encourage users to review this policy 
+      periodically.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      If you have any questions about this Privacy Policy or the extension itself, please:
+    </p>
+    <ul>
+      <li>Visit our <a href="https://github.com/vitalibkru/virtual-geo" target="_blank">GitHub repository</a></li>
+      <li>Create an <a href="https://github.com/vitalibkru/virtual-geo/issues" target="_blank">issue</a> for bug reports</li>
+      <li>Contact us through the Chrome Web Store support page</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://github.com/vitalibkru/virtual-geo" class="back-link" target="_blank">
+        ← Back to GitHub
+      </a>
+    </div>
+
+    <footer>
+      <p>Virtual GEO — Virtual Geolocation Extension</p>
+      <p>Open Source • Privacy First • No Data Collection</p>
+    </footer>
+  </div>
+</body>
+</html>
