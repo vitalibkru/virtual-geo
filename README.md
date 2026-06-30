@@ -2,8 +2,7 @@
 
 **Виртуальная геолокация для браузера** — задайте свои координаты для любых сайтов.
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web_Store-4a90e2?logo=google-chrome)](https://ВАШ_ССЫЛКА)
-[![Version](https://img.shields.io/badge/version-2.2-green)](https://github.com/ВАШ_ЮЗЕР/virtual-geo/releases)
+[![Version](https://img.shields.io/badge/version-2.2-green)](https://github.com/vitalibkru/virtual-geo/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 ---
@@ -20,15 +19,9 @@
 
 ## 📦 Установка
 
-### Вариант 1: Chrome Web Store (рекомендуется)
+### Вариант 1: Ручная установка (для разработчиков)
 
-1. Откройте [Chrome Web Store](https://ВАШ_ССЫЛКА)
-2. Нажмите **"Установить"**
-3. Готово!
-
-### Вариант 2: Ручная установка (для разработчиков)
-
-1. Скачайте [последний релиз](https://github.com/ВАШ_ЮЗЕР/virtual-geo/releases)
+1. Скачайте [последний релиз](https://github.com/vitalibkru/virtual-geo/releases)
 2. Распакуйте архив
 3. Откройте `chrome://extensions/`
 4. Включите **"Режим разработчика"** (справа вверху)
