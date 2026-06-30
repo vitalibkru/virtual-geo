@@ -37,10 +37,10 @@
 
 ### 🔗 Ссылки
 
-- 📄 [Политика конфиденциальности](https://ВАШ_ЮЗЕР.github.io/virtual-geo/)
-- 🐛 [Сообщить о баге](https://github.com/ВАШ_ЮЗЕР/virtual-geo/issues)
-- 💡 [Предложить идею](https://github.com/ВАШ_ЮЗЕР/virtual-geo/discussions)
-- 📖 [Исходный код](https://github.com/ВАШ_ЮЗЕР/virtual-geo)
+- 📄 [Политика конфиденциальности](https://github.com/vitalibkru/virtual-geo/)
+- 🐛 [Сообщить о баге](https://github.com/vitalibkru/virtual-geo/issues)
+- 💡 [Предложить идею](https://github.com/vitalibkru/virtual-geo/discussions)
+- 📖 [Исходный код](https://github.com/vitalibkru/virtual-geo)
 
 ### 🛠 Технологии
 
