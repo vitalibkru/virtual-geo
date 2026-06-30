@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Virtual GEO",
-  "version": "2.2",
+  "version": "1.0",
   "description": "Виртуальная геолокация — задайте свои координаты для всех сайтов",
   "permissions": [
     "storage",
