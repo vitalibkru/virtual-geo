@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      width: 280px; 
+      padding: 16px; 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      font-size: 13px; 
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+    }
+    
+    /* Заголовок */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .header h3 { 
+      margin: 0; 
+      font-size: 17px; 
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    .header .subtitle {
+      font-size: 11px;
+      color: #888;
+      margin-top: 3px;
+    }
+    
+    /* Группы полей */
+    .field-group {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .field-group-title {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    /* Поля */
+    .field {
+      margin-bottom: 8px;
+    }
+    .field:last-child {
+      margin-bottom: 0;
+    }
+    .field label { 
+      display: block; 
+      font-size: 12px;
+      color: #555; 
+      margin-bottom: 3px;
+    }
+    .field input[type="number"] { 
+      width: 100%; 
+      padding: 6px 8px; 
+      border: 1px solid #d0d0d0; 
+      border-radius: 4px; 
+      font-size: 13px;
+      background: white;
+      transition: border-color 0.2s;
+    }
+    .field input[type="number"]:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+    }
+    
+    /* Строка с двумя полями */
+    .field-row {
+      display: flex;
+      gap: 8px;
+    }
+    .field-row .field {
+      flex: 1;
+    }
+    
+    /* Чекбокс режима отладки */
+    .debug-row {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .debug-row input { 
+      margin: 0 8px 0 0; 
+      cursor: pointer; 
+      width: 15px;
+      height: 15px;
+    }
+    .debug-row label { 
+      margin: 0; 
+      font-size: 13px;
+      color: #333; 
+      cursor: pointer;
+      flex: 1;
+    }
+    .debug-row .hint {
+      font-size: 10px;
+      color: #999;
+      margin-left: 4px;
+    }
+
+    /* Кнопки */
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    button { 
+      padding: 9px; 
+      width: 100%; 
+      cursor: pointer; 
+      border: none; 
+      border-radius: 5px; 
+      font-size: 13px; 
+      font-weight: 600; 
+      transition: all 0.2s;
+    }
+    #saveBtn { 
+      background: #4a90e2; 
+      color: white; 
+    }
+    #saveBtn:hover { 
+      background: #357abd;
+      box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+    }
+    #testBtn { 
+      background: white; 
+      color: #4a90e2;
+      border: 1px solid #4a90e2;
+    }
+    #testBtn:hover { 
+      background: #f0f7ff;
+    }
+    
+    /* Статус */
+    .status { 
+      color: #27ae60; 
+      font-size: 12px; 
+      margin-top: 8px; 
+      text-align: center; 
+      display: none; 
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>📍 Virtual GEO</h3>
+    <div class="subtitle">Виртуальная геолокация</div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-group-title">Координаты</div>
+    
+    <div class="field">
+      <label>Широта</label>
+      <input type="number" step="any" id="latitude" value="53.8999146" placeholder="53.8999146">
+    </div>
+    
+    <div class="field">
+      <label>Долгота</label>
+      <input type="number" step="any" id="longitude" value="27.5203637" placeholder="27.5203637">
+    </div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-group-title">Дополнительно</div>
+    
+    <div class="field">
+      <label>Точность, м</label>
+      <input type="number" id="accuracy" value="10" placeholder="10">
+    </div>
+    
+    <div class="field-row">
+      <div class="field">
+        <label>Высота, м</label>
+        <input type="number" id="altitude" value="241" placeholder="241">
+      </div>
+      <div class="field">
+        <label>Точн. высоты</label>
+        <input type="number" id="altitudeAccuracy" value="5" placeholder="5">
+      </div>
+    </div>
+  </div>
+
+  <div class="debug-row">
+    <input type="checkbox" id="debugMode">
+    <label for="debugMode">Режим отладки</label>
+    <span class="hint">(для сложных сайтов)</span>
+  </div>
+
+  <div class="buttons">
+    <button id="saveBtn">💾 Сохранить</button>
+    <button id="testBtn">🌐 Проверить на Browserleaks</button>
+  </div>
+  
+  <div id="status" class="status">✅ Сохранено</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
